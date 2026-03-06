@@ -47,7 +47,7 @@ export default defineConfig({
               networkTimeoutSeconds: 15,
               expiration: {
                 maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24
+                maxAgeSeconds: 86400
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -61,10 +61,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 
-              },
-              cacheableResponse: {
-                statuses: [0, 200]
+                maxAgeSeconds: 31536000
               }
             }
           }
@@ -78,7 +75,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    minify: 'terser'
+    sourcemap: false
   }
 });
