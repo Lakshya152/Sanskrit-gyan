@@ -15,16 +15,23 @@ export default defineConfig({
         'robots.txt',
         'offline.html'
       ],
-      manifest: false, // We use our own public/manifest.json
+      manifest: false, 
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2,woff,ttf}'],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/openrouter\.ai\/api\/.*/i,
-            handler: 'NetworkOnly',
+            handler: 'NetworkFirst', // Fixed: Changed from NetworkOnly to NetworkFirst
             options: {
               cacheName: 'api-calls',
-              networkTimeoutSeconds: 15
+              networkTimeoutSeconds: 15, // Timeout now valid with NetworkFirst
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 // 1 day
+              },
+              cacheableResponse: {
+                statuses: [0, 200]
+              }
             }
           },
           {
@@ -34,7 +41,7 @@ export default defineConfig({
               cacheName: 'google-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+                maxAgeSeconds: 60 * 60 * 24 * 365 
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -48,7 +55,7 @@ export default defineConfig({
               cacheName: 'gstatic-fonts-cache',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 365 // 1 year
+                maxAgeSeconds: 60 * 60 * 24 * 365 
               },
               cacheableResponse: {
                 statuses: [0, 200]
@@ -60,7 +67,7 @@ export default defineConfig({
         navigateFallbackDenylist: [/^\/api/]
       },
       devOptions: {
-        enabled: false // Set true to test PWA in dev mode
+        enabled: false 
       }
     })
   ],
