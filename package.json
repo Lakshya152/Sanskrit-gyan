@@ -1,0 +1,49 @@
+{
+  "name": "sanskrit-grammar-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sanskrit Grammar – Words & Grammar Guidance App. A production-grade PWA for learning Sanskrit grammar with AI-powered spiritual guidance.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.2",
+    "vite-plugin-pwa": "^0.20.1",
+    "workbox-window": "^7.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "sanskrit",
+    "grammar",
+    "shabd-roop",
+    "dhatu-roop",
+    "pwa",
+    "ai",
+    "spiritual",
+    "learning"
+  ],
+  "author": "Sanskrit Grammar Team",
+  "license": "MIT"
+}
