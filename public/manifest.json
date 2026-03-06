@@ -1,0 +1,49 @@
+{
+  "name": "Sanskrit Grammar – Words & Guidance",
+  "short_name": "Sanskrit",
+  "description": "Learn Sanskrit grammar with AI-powered spiritual guidance. Explore Shabd Roop, Dhatu Roop, and more in a calm, sacred digital environment.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a0a00",
+  "theme_color": "#1a0a00",
+  "orientation": "portrait-primary",
+  "categories": ["education", "lifestyle", "books"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Sanskrit Chat",
+      "short_name": "AI Chat",
+      "description": "Ask spiritual and grammar questions",
+      "url": "/chat",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Shabd Roop",
+      "short_name": "Nouns",
+      "description": "View noun declensions",
+      "url": "/shabd-roop",
+      "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
