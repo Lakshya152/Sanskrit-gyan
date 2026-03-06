@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Dark brown/black background reflecting the deep theme -->
+  <rect width="512" height="512" rx="112" fill="#1a0a00"/>
+  
+  <!-- Subtle glowing background behind the Om -->
+  <circle cx="256" cy="256" r="160" fill="#f4a825" opacity="0.15" filter="blur(20px)"/>
+  
+  <!-- The sacred Om (ॐ) symbol -->
+  <text 
+    x="50%" 
+    y="55%" 
+    font-family="Arial, sans-serif" 
+    font-size="280" 
+    font-weight="bold" 
+    fill="#f4a825" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+  >ॐ</text>
+</svg>
