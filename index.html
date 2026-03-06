@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <!-- Primary Meta Tags -->
+    <title>Sanskrit Grammar – Words & Grammar Guidance</title>
+    <meta name="title" content="Sanskrit Grammar – Words & Grammar Guidance" />
+    <meta name="description" content="Learn Sanskrit grammar with AI-powered guidance. Explore Shabd Roop, Dhatu Roop, Sandhi, Samas, and more in a calm, spiritual experience." />
+    <meta name="author" content="Sanskrit Grammar Team" />
+    <meta name="keywords" content="Sanskrit, Grammar, Shabd Roop, Dhatu Roop, Sandhi, Samas, AI, Learning, Spiritual" />
+
+    <!-- Theme & Status Bar -->
+    <meta name="theme-color" content="#1a0a00" />
+    <meta name="msapplication-TileColor" content="#1a0a00" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sanskrit Grammar" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+
+    <!-- Icons for Various Devices -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png" />
+
+    <!-- Google Fonts — Clean sans-serif for UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Prevent FOUC -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #1a0a00;
+        font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        user-select: none;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* Initial loader before React hydrates */
+      .app-preloader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(ellipse at center, #2a1200 0%, #1a0a00 70%, #0d0500 100%);
+        z-index: 99999;
+        transition: opacity 0.5s ease-out;
+      }
+
+      .app-preloader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .preloader-om {
+        font-size: 64px;
+        color: #f4a825;
+        animation: omPulse 2s ease-in-out infinite;
+        text-shadow: 0 0 30px rgba(244, 168, 37, 0.5);
+      }
+
+      .preloader-text {
+        margin-top: 16px;
+        color: #c4956a;
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: 'Inter', sans-serif;
+        animation: textFade 2s ease-in-out infinite;
+      }
+
+      @keyframes omPulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+
+      @keyframes textFade {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pre-loader shown before React mounts -->
+    <div id="preloader" class="app-preloader">
+      <div class="preloader-om">ॐ</div>
+      <div class="preloader-text">Loading...</div>
+    </div>
+
+    <!-- React Root -->
+    <div id="root"></div>
+
+    <!-- Remove preloader after React mounts -->
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        var checkReact = setInterval(function() {
+          var root = document.getElementById('root');
+          if (root && root.children.length > 0) {
+            var preloader = document.getElementById('preloader');
+            if (preloader) {
+              preloader.classList.add('fade-out');
+              setTimeout(function() {
+                preloader.remove();
+              }, 600);
+            }
+            clearInterval(checkReact);
+          }
+        }, 100);
+
+        // Fallback: remove preloader after 5 seconds max
+        setTimeout(function() {
+          var preloader = document.getElementById('preloader');
+          if (preloader) {
+            preloader.classList.add('fade-out');
+            setTimeout(function() {
+              preloader.remove();
+            }, 600);
+          }
+        }, 5000);
+      });
+    </script>
+
+    <!-- App Entry -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
