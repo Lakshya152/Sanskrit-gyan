@@ -1,0 +1,12 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 🔮 Sanskrit Grammar App
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+User-agent: *
+Allow: /
+
+# Block crawlers from indexing service workers and dev builds
+Disallow: /dev-dist/
+Disallow: /sw.js
+Disallow: /workbox-*.js
+Disallow: /offline.html
